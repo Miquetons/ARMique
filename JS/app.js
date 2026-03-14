@@ -1,16 +1,20 @@
-// Diccionario de modelos disponibles
-const modelosDisponibles = {
-  lechuga: "../assets/modelos/Lechuga.glb",
-  platoN: "../assets/modelos/plato_nuevo.glb",
-  plato2: "../assets/modelos/platoop.glb"
-};
+window.onload = function () {
 
-// Función para mostrar un modelo según el botón
-function showModel(producto) {
+  const params = new URLSearchParams(window.location.search);
+  const producto = params.get("producto");
+
   const modelo = document.getElementById("modelo");
+
+  const modelosDisponibles = {
+    lechuga: "assets/Lechuga.glb",
+    platoN: "assets/plato_nuevo.glb",
+    plato2: "assets/platoop.glb"
+  };
+
   if (modelosDisponibles[producto]) {
     modelo.setAttribute("gltf-model", modelosDisponibles[producto]);
   } else {
-    modelo.setAttribute("gltf-model", "assets/modelos/Lechuga.glb"); // default
+    modelo.setAttribute("gltf-model", "assets/Lechuga.glb"); // default
   }
-}
+
+};

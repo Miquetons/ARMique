@@ -11,24 +11,22 @@
 
 <body style="margin: 0; overflow: hidden;">
 
-  <!-- Menú de platillos -->
-  <div style="position: absolute; top: 10px; left: 10px; z-index: 10;">
-    <button onclick="showModel('lechuga')">Lechuga</button>
-    <button onclick="showModel('platoN')">Plato Nuevo</button>
-    <button onclick="showModel('plato2')">Plato 2</button>
-  </div>
-
-  <!-- Escena AR -->
   <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+
     <a-marker preset="hiro">
+
+      <!-- ESTE ES EL MODELO DINÁMICO -->
       <a-entity
         id="modelo"
         scale="1 1 1"
         position="0 0.5 0"
         rotation="0 0 0">
       </a-entity>
+
     </a-marker>
+
     <a-entity camera></a-entity>
+
   </a-scene>
 
 </body>
