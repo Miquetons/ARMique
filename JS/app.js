@@ -1,8 +1,8 @@
 // Diccionario de modelos disponibles
 const modelosDisponibles = {
-  lechuga: "assets/modelos/Lechuga.glb",
-  platoN: "assets/modelos/plato_nuevo.glb",
-  plato2: "assets/modelos/platoop.glb"
+  lechuga: "../assets/modelos/Lechuga.glb",
+  platoN: "../assets/modelos/plato_nuevo.glb",
+  plato2: "../assets/modelos/platoop.glb"
 };
 
 // Función para mostrar un modelo según el botón
